@@ -15,7 +15,12 @@ module SpreeI18n
     # Need to manually add en to the array because the en.yml was moved from
     # this project. spree/spree now has those keys.
     def all_locales_options
-      SpreeI18n::Locale.all.map { |locale| locale_presentation(locale) }.push(['English (EN)', :en])
+      [
+        ['Deutsch (DE)', :de], 
+        ['Romanian (RO)', :ro],
+        ['Francais (FR)', :fr], 
+        ['English(EN)', :en]
+        ]
     end
 
     private
